@@ -62,3 +62,19 @@ print (hash(tuple([int(i) for i in list])))
 3, list comprehemssions
 x,y,z,n = [int(input()) for _ in range(4)]
 print ([[ i, j, k] for i in range( x + 1) for j in range( y + 1) for k in range(z+1) if ((i + j + k) != n) ])
+
+
+
+4, runner up
+n = int(input())
+arr = input()
+arr=arr.split()
+arr = [int(x) for x in arr]
+arr.sort()
+arr.reverse()
+tartget = arr[0]
+for i in range(1,len(arr)):
+    if (arr[i] < arr[0]):
+        print (arr[i])
+        break
+
