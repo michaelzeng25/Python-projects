@@ -32,3 +32,27 @@ for _ in range(int(input())):
     else:
         print (list)
 
+
+
+2, tuples
+
+n = int(input())
+list=input()
+list=list.split()
+list = [int(i) for i in list]
+list=tuple(list)
+print (hash(list))
+
+/*
+the first 2 lines just input the data.
+the 3rd line split the string into a list of char values.
+the 4th line convert the list into int type.
+then convert the list into tuple and print it as hash.
+
+*/
+
+or shorter code
+
+n = int(input())
+list=input().split()
+print (hash(tuple([int(i) for i in list])))
