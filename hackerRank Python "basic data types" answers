@@ -1,0 +1,34 @@
+1, lists
+
+list=[]
+for i in range(int(input())):
+    c = input().split()
+    for l in range(1,len(c)):
+        c[l]=int(c[l])
+    if (c[0]=='insert'):
+        list.insert(c[1], c[2])
+    elif (c[0]=='remove'):
+        list.remove(c[1])
+    elif (c[0]=='append'):
+        list.append(c[1])
+    elif (c[0]=='sort'):
+        list.sort()
+    elif (c[0]=='pop'):
+        list.pop()
+    elif (c[0]=='reverse'):
+        list.reverse()
+    elif(c[0]=='print'):
+        print(list)
+or
+
+list = []
+for _ in range(int(input())):
+    s = input().split()
+    commands = s[0]
+    values = s[1:]
+    if commands !="print":
+        commands += "("+ ",".join(values) +")"
+        eval("list."+commands)
+    else:
+        print (list)
+
