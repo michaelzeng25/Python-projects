@@ -99,3 +99,34 @@ if __name__ == '__main__':
             print(list[i][0])
    
 
+6, finding the percentage
+
+student_marks = {}
+for _ in range(int(input())):
+    name = input().split()
+    scores = list(map(float, line))
+    student_marks[name] = scores
+query_name = input()
+ave =  sum(student_marks[query_name]) / len(student_marks[query_name])
+print ('%.2f'% ave)
+
+/*
+('%.2f'% ave)- round the answer to 2 decimal place.
+*/
+
+or 
+
+student_marks = {}
+for _ in range(int(input())):
+    name = input().split()
+    student_marks[name[0]] = sum(map(float,name[1:])) / (len(name)-1)
+print ('%.2f'% student_marks[input()])
+
+/*
+name will be a list of string, first value is the name and rests are scores
+student_marks[name[0]] - will set the name as the key of the dictionary.
+sum(map(float,name[1:])) - convert the score to float and sum them.
+
+print ('%.2f'% student_marks[input()]) - user input here will triger the code above
+
+*/
