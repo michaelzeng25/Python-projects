@@ -1,1 +1,37 @@
+1, Arrays
 
+import numpy
+def arrays(arr):
+    # complete this function
+    # use numpy.array 
+    a = (numpy.array(arr,float))[::-1]
+    return a
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
+
+
+
+
+2, Eye and Identity
+
+import numpy
+def matrix(r,c):
+    if(r==c):
+        print(numpy.identity(r))
+    else:
+        print(numpy.eye(r,c,k=0))
+   
+if __name__ == '__main__':
+    r, c=map(int,input().split())
+    matrix(r,c)
+    
+ 
+ 
+ 
+ 3, Transpose and Flatten
+ import numpy
+N,M=map(int, input().split())
+tran_array = numpy.array([input().split() for x in range(N)],int)
+print (tran_array.transpose())
+print (tran_array.flatten())
