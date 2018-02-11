@@ -35,3 +35,38 @@ N,M=map(int, input().split())
 tran_array = numpy.array([input().split() for x in range(N)],int)
 print (tran_array.transpose())
 print (tran_array.flatten())
+
+
+
+
+
+4, concatenate
+
+import numpy
+
+N,M,P = map(int,input().split())
+array_1 = numpy.array([input().split() for x in range(N)],int)
+array_2 = numpy.array([input().split() for x in range(M)],int)
+print (numpy.concatenate((array_1, array_2), axis=0))
+
+
+
+
+5, zeros and ones
+import numpy
+
+r = tuple(map(int, input().split()))
+a =numpy.zeros((r),int)
+b =numpy.ones((r),int)
+print(a)
+print(b)
+
+
+
+
+
+6, eye and identity
+
+import numpy
+r, c=map(int,input().split())
+print(numpy.identity(r) if r==c else numpy.eye(r,c,k=0))
