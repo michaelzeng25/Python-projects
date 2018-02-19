@@ -97,3 +97,14 @@ a, b = (numpy.array([input().split() for i in range(n)],int) for _ in range(2))
 for _ in range(2) will repear the line 2 times thus gives 2 arrays.
 */
 
+
+
+
+8, floor, ceil, and rint
+import numpy
+A = numpy.array(input().split(), float)
+print(numpy.floor(A), numpy.ceil(A), numpy.rint(A), sep='\n')
+
+
+
+
