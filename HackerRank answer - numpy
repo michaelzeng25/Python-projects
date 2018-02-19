@@ -70,3 +70,30 @@ print(b)
 import numpy
 r, c=map(int,input().split())
 print(numpy.identity(r) if r==c else numpy.eye(r,c,k=0))
+
+/*
+another way of using if and else. 
+print numpy.identity(r) if r==c, if not print the other one
+*/
+
+
+
+
+
+
+7, Array Mathematics
+
+import numpy
+n, m = map(int,input().split())
+a = numpy.array([input().split() for i in range(n)],int)
+b = numpy.array([input().split() for i in range(n)],int)
+print(a+b, a-b, a*b, a//b, a%b, a**b, sep='\n')
+
+or
+
+a, b = (numpy.array([input().split() for i in range(n)],int) for _ in range(2))
+
+/*
+for _ in range(2) will repear the line 2 times thus gives 2 arrays.
+*/
+
