@@ -107,4 +107,10 @@ print(numpy.floor(A), numpy.ceil(A), numpy.rint(A), sep='\n')
 
 
 
+9, sum and prod
 
+import numpy
+n, m = map(int, input().split())
+a = numpy.array([input().split() for i in range(n)],int)
+b= numpy.sum(a, axis=0)
+print(numpy.prod(b))
