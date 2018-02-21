@@ -124,3 +124,32 @@ import numpy
 n, m = map(int,input().split())
 a = numpy.array([input().split() for _ in range(n)],int)
 print(max(numpy.min(a, axis=1)))
+
+
+
+11, mean, car, std
+
+import numpy
+n, m = map(int, input().split())
+a = numpy.array([input().split() for _ in range(n)],int)
+print (numpy.mean(a,axis=1), numpy.var(a, axis=0), numpy.std(a), sep='\n')
+
+
+12, dot and cross
+import numpy
+n = int(input())
+a, b = (numpy.array([input().split() for _ in range(n)],int) for _ in range(2))
+print(numpy.dot(a,b))
+
+/*
+2 and not n is because if n is 3, there will be 2 3x3 matrix
+*/
+
+
+
+
+13, inner and outer
+
+import numpy
+a, b =(numpy.array(input().split(),int) for _ in range(2))
+print (numpy.inner(a,b), numpy.outer(a,b), sep='\n')
