@@ -114,3 +114,13 @@ n, m = map(int, input().split())
 a = numpy.array([input().split() for i in range(n)],int)
 b= numpy.sum(a, axis=0)
 print(numpy.prod(b))
+
+
+
+
+10, min and max
+
+import numpy
+n, m = map(int,input().split())
+a = numpy.array([input().split() for _ in range(n)],int)
+print(max(numpy.min(a, axis=1)))
