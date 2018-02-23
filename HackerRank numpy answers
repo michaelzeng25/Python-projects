@@ -153,3 +153,15 @@ print(numpy.dot(a,b))
 import numpy
 a, b =(numpy.array(input().split(),int) for _ in range(2))
 print (numpy.inner(a,b), numpy.outer(a,b), sep='\n')
+
+
+
+
+
+
+15, Linear Algebra
+
+import numpy as np
+n = int(input())
+a = np.array([input().split() for _ in range(n)],float)
+print(np.linalg.det(a))
