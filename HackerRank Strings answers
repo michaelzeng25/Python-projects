@@ -10,3 +10,12 @@ def swap_case(s):
             s1[i] = s1[i].upper()
     s2 = ''.join(s1)
     return (s2)
+
+inspired by other people
+/*
+
+def swap_case(s):
+        a = ''.join([x.lower() if x.isupper() else x.upper() for x in s])
+        return (a)
+        
+*/ (Damn, I really love python now)
