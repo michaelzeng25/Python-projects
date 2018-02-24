@@ -1,0 +1,12 @@
+1, sWAP cASE
+
+def swap_case(s):
+    # convert it into a list of char
+    s1 = list(s)
+    for i in range(len(s1)):
+        if(s1[i].isupper() == True):
+            s1[i] = s1[i].lower()
+        elif (s1[i].islower() == True):
+            s1[i] = s1[i].upper()
+    s2 = ''.join(s1)
+    return (s2)
