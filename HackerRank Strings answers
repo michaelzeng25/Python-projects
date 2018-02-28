@@ -19,3 +19,32 @@ def swap_case(s):
         return (a)
         
 */ (Damn, I really love python now)
+
+
+
+
+2, split and join
+
+def split_and_join(line):
+    # write your code here
+    line2 = "-".join(line.split(" "))
+    return line2
+    
+    
+  3, print name
+  
+  def print_full_name(a, b):
+    print("Hello {0} {1}! You just delved into python.".format(a,b))
+    
+    
+    
+    
+    
+ 5, find a string
+ 
+ def count_substring(string, sub_string):
+    count=0
+    for x in range(len(string)-1):
+        if(string[x:x+len(sub_string)] == sub_string):
+            count+=1
+    return count
