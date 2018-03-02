@@ -48,3 +48,21 @@ def split_and_join(line):
         if(string[x:x+len(sub_string)] == sub_string):
             count+=1
     return count
+
+
+
+6, validation
+
+
+s = input()
+commands = ['isalnum', 'isalpha', 'isdigit', 'islower','isupper']
+for c in commands:
+    print(any(eval('x.'+c+'()') for x in s))
+
+or ( eval should be used carefully)
+
+
+s = input()
+commands = [str.isalnum, str.isalpha, str.isdigit, str.islower,str.isupper]
+for c in commands:
+    print(any(c(x) for x in s))
