@@ -83,3 +83,16 @@ for i in range(N-2,0,-2):
 if N is 5, the loop will print 5-2=3, 3+(-2)=1, 1+(-2) is < 0, so stop. the results are 3,1
 
 */
+
+
+
+
+8, capitalize
+
+def capitalize(string):
+    #capitalize the first char and split the string. (must include ' ' because some string might have more spaces)
+    s = [x.capitalize() for x in string.split(' ')]
+    
+    #put the string back together
+    s=' '.join(s)
+    return (s)
