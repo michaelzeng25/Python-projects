@@ -96,3 +96,20 @@ def capitalize(string):
     #put the string back together
     s=' '.join(s)
     return (s)
+
+
+
+9, Merge the Tools!
+
+import textwrap
+def merge_the_tools(string, k):
+    # using textwrap to wrap the string in to n number of sub string with len = k 
+    l=textwrap.wrap(string,k)
+    
+    u=""
+    for i in range(len(l)):
+        for s in l[i]:
+            if s not in u:
+                u +=s
+        print(u)
+        u="" # reset u to a empty string
