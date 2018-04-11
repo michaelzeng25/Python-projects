@@ -1,0 +1,9 @@
+
+1, set
+def average(array):
+    s=set(array)
+    l = float(len(s))
+    sum_s = float(sum(s))
+    return("%1.3f"% (sum_s/l))
+   
+ 
