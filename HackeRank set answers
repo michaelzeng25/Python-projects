@@ -6,4 +6,20 @@ def average(array):
     sum_s = float(sum(s))
     return("%1.3f"% (sum_s/l))
    
- 
+   
+   
+
+
+2, Symmetric Difference
+a, b= [int(input()), input().split()]
+c, d= [int(input()), input().split()]
+
+setb = set(b)
+setd = set(d)
+
+setb2 = setb.difference(setd)
+setd2 = setd.difference(setb)
+
+q = setb2.union(setd2)
+
+print('\n'.join(sorted(q,key=int)))
