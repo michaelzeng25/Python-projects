@@ -13,13 +13,25 @@ def average(array):
 2, Symmetric Difference
 a, b= [int(input()), input().split()]
 c, d= [int(input()), input().split()]
-
 setb = set(b)
 setd = set(d)
-
 setb2 = setb.difference(setd)
 setd2 = setd.difference(setb)
-
 q = setb2.union(setd2)
-
 print('\n'.join(sorted(q,key=int)))
+
+or
+
+a,b = [set(input().split()) for _ in range(4)][1::2]
+print(a)
+print(b)
+print ('\n'.join(sorted(a^b, key=int)))
+#  [set(input().split()) for _ in range(4)]
+# in this code, you will enter the size of the list then the actual list and repeat.
+# 4, 1 2 2 4
+# 4, 7 7 8 9
+#[1::2] = [start:stop:step]. in the list above, list 1 and 3 are the actual lists while 0 and 2 are just the size of the list which is 4 here.
+# so, set(1,2,2,4) will give 1,2,4. and set(7 7 8 9) will give 7 8 9. These 2 sets are string values.
+#print ('\n'.join(sorted(a^b, key=int)))
+# '\n'.join will join the list column down. if use ' '.join, the list will be at the same row and seprate by a space.
+# a^b is sim
