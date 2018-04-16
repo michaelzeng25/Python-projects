@@ -35,3 +35,23 @@ print ('\n'.join(sorted(a^b, key=int)))
 #print ('\n'.join(sorted(a^b, key=int)))
 # '\n'.join will join the list column down. if use ' '.join, the list will be at the same row and seprate by a space.
 # a^b is sim
+
+
+
+
+
+
+
+3, No Idea!
+
+n, list1,set1,set2 = [(input().split()) for _ in range(4)][0::1]
+list1 = map(int, list1)
+set1 = set(map(int, set1))
+set2 = set(map(int, set2))
+happiness = sum([(i in set1)-(i in set2) for i in list1])
+print(happiness)
+
+Note:
+(i in set1) gives how many time does i appear in set1 - as a
+(i in set2) same idea - as b
+so, a-b is the sum of like in A - dislikes in B. 
