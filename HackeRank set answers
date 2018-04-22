@@ -62,3 +62,38 @@ so, a-b is the sum of like in A - dislikes in B.
 4, .add()
 s = [input() for x in range(int(input()))]
 print(len(set(s)))
+
+
+
+
+
+5, Set .discard(), .remove() & .pop()
+
+n = int(input())
+s = set(map(int, input().split())) 
+for i in range(int(input())):
+    s2 = input().split()
+    if(s2[0]=='pop'):
+        s.pop()
+    elif(s2[0]=='remove'):
+        s.remove(int(s2[1]))
+    else:
+        s.discard(int(s2[1]))
+print(sum(s))
+
+
+Or another very smart solution from other guy:
+n = int(input())
+s = set(map(int, input().split())) 
+for i in range(int(input())):
+    eval('s.{0}({1})'.format(*input().split()+['']))
+print(sum(s))
+
+*input().split():
+Asterisk expands list or tuple to positional arguments. If we have a=[1,2,3] then function(*a) is equal to function(1,2,3)
+
++[''} is for pop() because it does not have the second argument.
+
+s.{0}({1}) - s.remove(4) where {0} is remove and ({1}) is (4)
+
+
