@@ -114,3 +114,18 @@ or
 
 n, english,m, french = [input().split() for x in range(4)]
 print(len(set(english).union(set(french))))
+
+
+
+
+
+
+
+7, set mutations
+A, SetA= (input().split() for x in range(2))
+SetA = set(SetA)
+for i in range(int(input())):
+    s = input().split()
+    eval('SetA.{0}({1})'.format(s[0], input().split()))
+print(sum(map(int, SetA)))
+    
