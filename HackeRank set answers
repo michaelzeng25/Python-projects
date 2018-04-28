@@ -97,3 +97,20 @@ Asterisk expands list or tuple to positional arguments. If we have a=[1,2,3] the
 s.{0}({1}) - s.remove(4) where {0} is remove and ({1}) is (4)
 
 
+
+
+
+
+
+6.set.union()
+n, english = [input().split() for x in range(2)]
+m, french = [input().split() for x in range(2)]
+english = set(english)
+french = set(french)
+ef = english.union(french)
+print(len(ef))
+
+or
+
+n, english,m, french = [input().split() for x in range(4)]
+print(len(set(english).union(set(french))))
