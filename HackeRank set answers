@@ -128,3 +128,39 @@ for i in range(int(input())):
     eval('SetA.{0}({1})'.format(*input().split(), input().split()))
 print(sum(map(int, SetA)))
     
+    
+
+
+
+8, the captain's room
+
+k, l = int(input()), list(map(int, input().split()))
+l2=set(l)
+print((sum(l2)*k - sum(l))//(k-1))
+
+
+
+
+9, check subset
+for i in range(int(input())):
+    seta, setb = [set(input().split()) for x in range(4)][1::2]
+    t=True if seta.issubset(setb) else False
+    print(t)
+    
+ or
+ 
+ for i in range(int(input())):
+    A, B = [set(input().split()) for x in range(4)][1::2]
+    print (not bool(A.difference(B)))
+    
+    
+    
+ 9, check strick superset
+ setA = set(input().split())
+count=0
+n=int(input())
+for i in range(n):
+    subset = set(input().split())
+    if(subset.issubset(setA)):
+        count+=1
+print(bool(count==n))
