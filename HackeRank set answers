@@ -125,7 +125,6 @@ print(len(set(english).union(set(french))))
 A, SetA= (input().split() for x in range(2))
 SetA = set(SetA)
 for i in range(int(input())):
-    s = input().split()
-    eval('SetA.{0}({1})'.format(s[0], input().split()))
+    eval('SetA.{0}({1})'.format(*input().split(), input().split()))
 print(sum(map(int, SetA)))
     
