@@ -1,0 +1,14 @@
+1, Map and Lambda Function
+
+cube = lambda x: pow(x,3)# complete the lambda function 
+
+def fibonacci(n):
+    # return a list of fibonacci numbers
+    l = [0,1]
+    for i in range(n-2):
+        l.append(l[i]+l[i+1])
+    return (l[0:n])
+    
+ /*
+ l[0:n]: if n is 0, this will make sure thag the function return an empty list. 
+ */
