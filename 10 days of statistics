@@ -1,0 +1,16 @@
+1, mean, median, and mode
+
+import numpy as np
+from scipy import stats
+
+n, l = [ input().split() for x in range(2)]
+
+# convert the list to int type and use the built in fuctions of mean and median from the numpy library
+l = list(map(int, l))
+print(np.mean(l))
+print(np.median(l))
+
+# numpy does not have a built-in fuction for the mode, this library has it.
+# m[0] returns the value and m[1] returns the total number of occurance of that value
+m = stats.mode(l)
+print(int(m[1]))
