@@ -14,3 +14,22 @@ print(np.median(l))
 # m[0] returns the value and m[1] returns the total number of occurance of that value
 m = stats.mode(l)
 print(int(m[1]))
+
+
+
+
+
+
+
+2, weighted mean
+
+n, l1, l2 = [input().split() for x in range(3)]
+l1, l2 = list(map(int, l1)), list(map(int, l2))
+s = sum(l2)
+
+# using map and lambda. map(lan, l1, l2) will return a single with square values of the same index from the previous lists
+lan = lambda x, y: x * y
+an = sum(map(lan, l1, l2))
+
+# print the answer in 1 decimnal place
+print("%.1f" % (an/s))
