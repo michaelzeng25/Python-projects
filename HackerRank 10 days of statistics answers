@@ -33,3 +33,37 @@ an = sum(map(lan, l1, l2))
 
 # print the answer in 1 decimnal place
 print("%.1f" % (an/s))
+
+
+
+
+
+
+
+
+3, quartile
+
+n, a =(input().split() for x in range(2))
+a=list(map(int, a))
+a.sort()
+le = len(a)
+
+if(le%2==0):
+    half_le = int((le)/2)
+    h = int(half_le/2)
+    right_begin = half_le
+    print(int((a[h - 1] + a[h]) / 2 if half_le%2==0 else a[h]))
+    print(int((a[half_le-1] + a[half_le] ) / 2))
+    print(int((a[right_begin + h - 1] + a[right_begin + h]) / 2 if half_le%2==0 else a[right_begin + h]))
+else:
+    half_le = int(le/2) 
+    h = int(half_le/2)
+    right_begin = half_le+1
+    print(int((a[h - 1] + a[h]) / 2 if half_le%2==0 else a[h]))
+    print(int(a[half_le]))
+    print(int((a[right_begin + h - 1] + a[right_begin + h]) / 2 if half_le%2==0 else a[right_begin + h]))
+    
+    
+ note:
+ 1,2,3,4,5 = (1,2) and (4,5)
+ 1,2,3,4,5,6=(1,2,3) and *(4,5,6)
