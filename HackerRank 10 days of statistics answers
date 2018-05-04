@@ -103,3 +103,17 @@ else:
     q3=(int((a[right_begin + h - 1] + a[right_begin + h]) / 2 if half_le%2==0 else a[right_begin + h]))
     print("%.1f"% (q3-q1))
 
+
+
+
+5, std
+
+import math
+n, l=int(input()), list(map(int,(input().split())))
+mu = sum(l)/n
+
+l2=[]
+for i in range(len(l)):
+    l2.append(pow(l[i]-mu,2))
+print("%.1f"%  (math.sqrt(sum(l2)/n)))
+
