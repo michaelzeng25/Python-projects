@@ -67,3 +67,39 @@ else:
  note:
  1,2,3,4,5 = (1,2) and (4,5)
  1,2,3,4,5,6=(1,2,3) and *(4,5,6)
+ 
+ 
+ 
+ 
+ 4, interquartile range
+n, a2, b =(input().split() for x in range(3))
+a2, b=list(map(int, a2)), list(map(int, b))
+
+# create a new list that with repeative values of a2 with the frequency of each corresponding value in b
+lea = len(a2)
+ind = 0
+a=[]
+for i in range(lea):
+    for j in range(b[ind]):
+        a.append(a2[i])
+    ind+=1
+  
+a.sort()  
+le = len(a)
+if(le%2==0):
+    half_le = int((le)/2)
+    h = int(half_le/2)
+    right_begin = half_le
+    q1=(int((a[h - 1] + a[h]) / 2 if half_le%2==0 else a[h]))
+    q2=(int((a[half_le-1] + a[half_le] ) / 2))
+    q3=(int((a[right_begin + h - 1] + a[right_begin + h]) / 2 if half_le%2==0 else a[right_begin + h]))
+    print("%.1f"% (q3-q1))
+else:
+    half_le = int(le/2) 
+    h = int(half_le/2)
+    right_begin = half_le+1
+    q1=(int((a[h - 1] + a[h]) / 2 if half_le%2==0 else a[h]))
+    q2=(int(a[half_le]))
+    q3=(int((a[right_begin + h - 1] + a[right_begin + h]) / 2 if half_le%2==0 else a[right_begin + h]))
+    print("%.1f"% (q3-q1))
+
