@@ -1,0 +1,6 @@
+1, itertools.product()
+
+from itertools import product as pt
+l1, l2 = (input().split() for x in range(2))
+l1, l2 = list(map(int,l1)), list(map(int,l2))
+print(*pt(l1,l2)) # the starred expression * will remove the []
