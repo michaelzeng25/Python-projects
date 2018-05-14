@@ -4,3 +4,18 @@ from itertools import product as pt
 l1, l2 = (input().split() for x in range(2))
 l1, l2 = list(map(int,l1)), list(map(int,l2))
 print(*pt(l1,l2)) # the starred expression * will remove the []
+
+
+
+2, itertools.permutations()
+from itertools import permutations as pe
+s = input().split()
+s2 = sorted(s[0])
+s3 = int(s[1])
+an = pe(s2,s3)
+print(*(''.join(i) for i in (an)), sep='\n')
+
+# an = <generator object <genexpr> at 0x7f7c2534de60>
+# or you can place list before pe: list(pe(s2,s3)) so an =[('A','C'), and so on]
+# *an = ('A', 'C') ('A', 'H') and so on (this works with or without using list)
+# first i is equal to ('A','C'). The * is used to unpack the values in an.
