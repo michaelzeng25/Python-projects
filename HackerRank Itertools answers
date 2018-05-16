@@ -19,3 +19,14 @@ print(*(''.join(i) for i in (an)), sep='\n')
 # or you can place list before pe: list(pe(s2,s3)) so an =[('A','C'), and so on]
 # *an = ('A', 'C') ('A', 'H') and so on (this works with or without using list)
 # first i is equal to ('A','C'). The * is used to unpack the values in an.
+
+
+
+3, itertools.combinations()
+from itertools import combinations as cb
+s = (input().split())
+s1=sorted(s[0])
+s2=int(s[1])
+for x in range(s2):
+    an=cb(s1,x+1)
+    print(*("".join(i) for i in an),sep='\n')
